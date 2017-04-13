@@ -42,7 +42,7 @@ public class MysqlUtil {
         HashMap<String, Object> result = new HashMap<String, Object>();
         try {
             PreparedStatement ps = conn.prepareStatement(sql);
-            ResultSet rs = ps.executeQuery(sql);
+            ResultSet rs = ps.executeQuery();
             rs.next();
             result.put("time", rs.getString("time"));
             result.put("success", rs.getInt("success"));
